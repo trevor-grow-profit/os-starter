@@ -1,0 +1,14 @@
+# Copy this file to .dev.vars for local development. Never commit .dev.vars.
+# In production, set each one with: wrangler secret put NAME
+# Leave any line out and that connection just shows "Not connected".
+
+AIRTABLE_TOKEN=
+AIRTABLE_BASE_ID=
+AIRTABLE_TABLE=
+
+STRIPE_SECRET_KEY=
+
+GHL_API_KEY=
+GHL_LOCATION_ID=
+
+SLACK_WEBHOOK_URL=

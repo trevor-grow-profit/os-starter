@@ -1,0 +1,24 @@
+{
+  // Your Worker's name. This is also its URL: <name>.<your-subdomain>.workers.dev
+  "name": "os-starter",
+  "main": "src/index.js",
+  "compatibility_date": "2025-06-01",
+  "compatibility_flags": ["nodejs_compat"],
+  // The Worker runs first on every request, so nothing in /public is served until you're signed in.
+  "assets": { "directory": "./public", "binding": "ASSETS", "run_worker_first": ["/*"] },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "os-starter",
+      // Paste the id that `wrangler d1 create os-starter` prints.
+      "database_id": "REPLACE_WITH_YOUR_DATABASE_ID"
+    }
+  ],
+  "vars": {
+    // Set this to the address you'll use, e.g. "https://os.yourdomain.com".
+    // Leave it empty and the OS uses whatever address the request came in on.
+    "APP_ORIGIN": "",
+    "APP_NAME": "My OS"
+  },
+  "observability": { "enabled": true }
+}
